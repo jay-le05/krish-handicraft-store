@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0803c;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.logo img{
+    width: 50px;
+}
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ffd1a3;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.header-btn a{
+    padding: 10px 20px;
+    font-weight: 500; 
+    margin-left: 10px;  
+    transition: all 0.3s;
+}
+.header-btn .sign-in{
+    background-color: #ffd1a3;
+    color: #f0803c;
+    border-radius: 0.5rem;
+    border: 2px;
+}
+.header-btn .sign-in:hover{
+    background-color: #0066ff;
+    color: #fff;
+}
+.header-btn .sign-up{
+    color: white;
+    text-decoration: none;
+}
+.Home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/KrishStore.webp);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 100px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+
+}
+.Home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.text{
+    position: relative;
+    z-index: 2;
+}
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    color: #f0803c;
+}
+.text span{
+    color: white;
+}
+.text p{
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+.app-stores{
+    display: flex;
+    gap: 1rem;
+}
+.app-stores img{
+    width: 120px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+    cursor: pointer;
+    transition: 0.3s;
+}
+.app-stores img:hover{
+    transform: scale(1.1);
+}
+.form-container{
+    z-index: 2;
+    background-color: rgba(red, green, blue, 0.8);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-left: auto;  
+    backdrop-filter: blur(10px);   
+}
+.form-container h2{
+    font-size: 1.8rem;
+    color: #f0803c;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form-container input,
+.form-container select,
+.form-container textarea{
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    border: 1px solid #f0803c;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    transition: 0.3s ease;
+    margin-bottom: 15px;
+}
+.form-container button{
+    padding: 12px;
+    background-color: #f0803c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.form-container button:hover{
+    background-color: #2600ff;
+    color: #ffffff;
+}
+.heading{
+    text-align: center;
+    margin: 50px 0;
+    font-size: 2rem;
+    color: #f0803c;
+}
+.heading h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 50px;
+    margin: 3rem 0;
+}
+.service-container .service-box{
+    background-color: rgba(250,250,250,250,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    box-shadow: rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+.service-container .service-box:hover{
+    transform: scale(1.05);
+}
+.service-container .service-box i{
+    font-size: 40px;
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    color: #f0803c;
+}
+.service-container .service-box h3{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f0803c;
+}
+.service-container .service-box p{
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.product-container .product-box{
+    background-color: rgba(250,250,250,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+.product-container .product-box:hover{
+    transform: scale(1.05);
+}
+.product-container .product-box img{
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem;
+    object-position: center;
+}
+.product-container .product-box .btn{
+    padding: 5px 15px;
+    background-color: #ff00aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.product-container .product-box .btn:hover{
+    background-color: #0026ff;
+    color: white;
+}
+.product-container .product-box h3{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f0803c;
+}
+.product-container .product-box p{
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
